@@ -1,6 +1,4 @@
-# Large Language Models are Realistic Microservice Trace Generators
-
-We include supplemental material to reproduce our results from data preprocessing to evaluation.
+# Microservice Trace Generators with Large Language Models
 
 ## Dependencies
 We use python language where dependencies can be found in `trace_gen/requirements.txt`.
