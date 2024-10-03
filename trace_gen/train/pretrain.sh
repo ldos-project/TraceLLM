@@ -1,0 +1,14 @@
+accelerate launch scripts/pretraining.py \
+--model_ckpt meta-llama/Llama-2-7b-hf \
+	--train_batch_size 2 \
+	--valid_batch_size 2 \
+	--learning_rate 3e-4 \
+	--num_warmup_steps 400 \
+	--gradient_accumulation 8 \
+	--gradient_checkpointing False \
+	--max_train_steps 32000 \
+	--save_checkpoint_steps 8000 \
+	--save_dir <FILLME> \
+	--lora True \
+	--first_phase_num_epoch 0 \
+	--max_eval_steps 800

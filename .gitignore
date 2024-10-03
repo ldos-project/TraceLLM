@@ -1,0 +1,13 @@
+data
+trace_gen/heatmap_results
+trace_gen/selected_heatmap_results
+trace_gen/one-shot-accuracy/output*
+trace_gen/train/codeparrot
+trace_gen/train/wandb
+trace_gen/transformers
+trace_gen/generate/gen_results
+trace_gen/generate/vllm_script/outputs
+trace_gen/generate/trace_oracle/figures
+trace_gen/preprocess/.venv
+**/__pycache__
+**/.DS_Store
