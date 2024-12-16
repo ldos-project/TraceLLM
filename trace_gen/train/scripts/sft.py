@@ -1,7 +1,6 @@
 from pathlib import Path
 
 from argparse import Namespace
-import pandas as pd
 import pickle
 import torch
 import datasets
@@ -13,7 +12,6 @@ import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser, set_seed
 from huggingface_hub import Repository
 
-from peft import AutoPeftModelForCausalLM
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -142,7 +140,7 @@ response_template_ids = tokenizer.encode(response_template, add_special_tokens=F
 collator = DataCollatorForCompletionOnlyLM(response_template_ids, tokenizer=tokenizer)
 
 ### Dataset ###
-dirname = "../../data/CallGraph"
+dirname = "data/CallGraph"
 train_data = load_iterable_dataset_from_csv_path(dirname + "/train_data_sft")
 train_data = train_data.shuffle(seed=args.seed)
 validation_data = load_iterable_dataset_from_csv_path(dirname + "/validation_data_sft")

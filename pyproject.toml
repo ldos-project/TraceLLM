@@ -2,6 +2,7 @@
 name = "trace-gen"
 version = "0.1.0"
 description = ""
+authors = ["Donghyun Kim <donghyun@utexas.edu>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

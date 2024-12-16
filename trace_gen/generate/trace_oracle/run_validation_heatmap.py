@@ -6,6 +6,7 @@ from trace_gen.utils.preprocessing.read_file import file_to_samples
 import argparse
 import asyncio
 from vllm import SamplingParams
+import msgspec
 
 sem = asyncio.Semaphore(8)
 
@@ -34,6 +35,8 @@ async def run_heatmap(depth: int, num_edge: int, repetitions: int, generator, sa
         num_finished = 0
         num_valid = 0
         num_correct_instruction = 0
+        sum_depth = 0
+        sum_edges = 0
 
         for i in range(repetitions):
             prompt = prompts[i % len(prompts)] + "\n ### Answer: \n<layer>\n<edges>"
@@ -48,7 +51,7 @@ async def run_heatmap(depth: int, num_edge: int, repetitions: int, generator, sa
                 GenRequest(
                     prompt=prompt,
                     task_type=task_type,
-                    sampling_params=sampling_params.__dict__,
+                    sampling_params=sampling_params,
                 )
             )
         while graph_gen_instructions:
@@ -56,7 +59,6 @@ async def run_heatmap(depth: int, num_edge: int, repetitions: int, generator, sa
                 graph_gen_instructions,
                 output_path=f"output_temp_{args.temperature}_tag_{args.tag}.trace",
                 failure_log=f"output_temp_{args.temperature}_tag_{args.tag}.failure",
-                summary_path=args.summary_path,
                 root_requests=root_requests,
             )
 
@@ -64,19 +66,27 @@ async def run_heatmap(depth: int, num_edge: int, repetitions: int, generator, sa
             num_finished += stats[0]
             num_valid += stats[1]
             num_correct_instruction += stats[2]
+            sum_edges += stats[3]
+            sum_depth += stats[4]
 
         with open(args.summary_path, "a") as f:
             f.write(f"({num_edge}:{depth}),")
             f.write(f"{num_finished},{num_valid},{num_correct_instruction},{repetitions}")
+            if num_valid > 0:
+                f.write(f",({sum_edges/num_valid:.2f}:{sum_depth/num_valid:.2f})" + "\n")
+            else:
+                f.write(",(0:0)" + "\n")
 
 async def main(generator, sampling_params, gen_type):
     repetitions = 50
     tasks = []
+    json_decoder = msgspec.json.Decoder()
+    sampling_params_dict = json_decoder.decode(msgspec.json.encode(sampling_params))
     for depth in range(1, 7):
         for num_edge in range(1, 31):
             if depth > num_edge or (num_edge > 1 and depth == 1):
                 continue
-            tasks.append(run_heatmap(depth, num_edge, repetitions, generator, sampling_params, gen_type))
+            tasks.append(run_heatmap(depth, num_edge, repetitions, generator, sampling_params_dict, gen_type))
     await asyncio.gather(*tasks)
 
 
@@ -90,6 +100,7 @@ if __name__ == "__main__":
     parser.add_argument("--gen-type", type=str)
     args = parser.parse_args()
     # We assume the vllm engine is available at args.host:args.port.
+    # If not launched, use 'python -m vllm.entrypoints.api_server --model <model_path>'
     api_url = f"http://{args.host}:{args.port}"
 
     validator = GenOutputValidator()

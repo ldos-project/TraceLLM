@@ -2,7 +2,7 @@ import os
 import pickle
 from collections import defaultdict
 
-cg_stat_path = "data/CallGraph/cg_stats/"
+cg_stat_path = "data/CallGraph/training_data/cg_stats/"
 
 merged_p90_stats = defaultdict(lambda: (0, -1, 0))
 # Open all files with extension ".p90" and read the pickle file
@@ -22,7 +22,7 @@ for filename in os.listdir(cg_stat_path):
                 merged_p90_stats[svc_id] = (global_max_lat, global_p90, global_avg)
 
 # Save the merged data to a new file
-with open("data/CallGraph/cg_stats/merged_p90_stats.p90", "wb") as file:
+with open(f"{cg_stat_path}merged_p90_stats.p90", "wb") as file:
     pickle.dump(dict(merged_p90_stats), file)
 
 merged_rare_comm_events = defaultdict(list)
@@ -37,5 +37,5 @@ for filename in os.listdir(cg_stat_path):
                 merged_rare_comm_events[svc_id].extend(rare_comm_events)
 
 # Save the merged data to a new file
-with open("data/CallGraph/cg_stats/merged_rare_comm_events.rare_comm", "wb") as file:
+with open(f"{cg_stat_path}merged_rare_comm_events.rare_comm", "wb") as file:
     pickle.dump(dict(merged_rare_comm_events), file)

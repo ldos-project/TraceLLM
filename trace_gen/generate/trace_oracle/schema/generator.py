@@ -9,8 +9,6 @@ from trace_gen.generate.trace_oracle.schema.task_type import TraceGenTaskType
 from trace_gen.generate.trace_oracle.schema.validator import GenOutputValidator
 from trace_gen.schema.call_graph import CallGraph
 
-from collections import defaultdict
-
 class TraceGenerator:
 
     def __init__(
@@ -25,7 +23,6 @@ class TraceGenerator:
         requests: list[GenRequest],
         output_path: str,
         failure_log: str,
-        summary_path: str,
         root_requests: List[GenRequest] = []
     ):
         headers = {"User-Agent": "Test Client"}
@@ -54,19 +51,15 @@ class TraceGenerator:
 
             responses = [json.loads(response.content) for response in outputs]
 
-
             # append outputs to GenRequests
             num_retry = 1
-            error_logs = defaultdict(list)
             with open(output_path, "a") as f:
                 with open(failure_log, "a") as e:
                     with open(failure_log + ".error_code", "a") as ec:
                         for request, response in zip(current_batch, responses):
-                            generated_text = response["outputs"][0]["output_text"]
+                            generated_text = response["text"][0]
                             request.trials.append(generated_text)
                             request.check_validity(self.validator)
-
-                            f.write(f"<{request.id}>" + generated_text + "\n")
 
                             if request.is_valid:
                                 if request.task_type == TraceGenTaskType.graph_gen or TraceGenTaskType.graph_gen_recursive:
@@ -82,7 +75,7 @@ class TraceGenerator:
                                 ec.write(f"<{request.id}>" + error_codes + "\n")
                                 error_msg = '/'.join([reason.detail for reason in invalid_reasons])
                                 e.write(f"<{request.id}>FAILED CASE\nReasons: {error_msg}\nResult:\n")
-                                e.write(f"{request.prompt + request.trials[-1]}\n")
+                                e.write(f"{request.trials[-1]}\n")
                                 if len(request.trials) < num_retry:
                                     request_queue.appendleft(request)
                                 else:
@@ -125,7 +118,7 @@ class TraceGenerator:
                             f.write(synthetic + "\n")
                     elif request.task_type == TraceGenTaskType.graph_gen_non_recursive:
                         num_valid += 1
-                        instruction, cg = self.validator.parse(request.task_type, request.prompt + request.trials[-1])
+                        instruction, cg = self.validator.parse(request.task_type, request.trials[-1])
                         correct = True
                         if request.instruction.num_edges > 0 and len(cg.edges) != instruction.num_edges:
                             correct = False

@@ -24,9 +24,6 @@ from trace_gen.utils.generation.prompt import (
 )
 
 
-from vllm import SamplingParams
-
-
 class GenRequest(BaseModel):
     id: int = -1
     prompt: str

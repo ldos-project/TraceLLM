@@ -24,7 +24,7 @@ def read_csv(filename, output_path, cg_stat_path: str):
     latency_stats = defaultdict(list)
     communication_stats = defaultdict(lambda: defaultdict(int))
 
-    task_type = TraceGenTaskType.graph_gen
+    task_type = TraceGenTaskType.graph_gen_recursive
 
     with open(f"{cg_stat_path}/merged_p90_stats.p90", "rb") as f:
         p90_stats = pickle.load(f)
@@ -36,6 +36,7 @@ def read_csv(filename, output_path, cg_stat_path: str):
         start = time.time()
         cnt = 0
         instruction_output = {"instruction": [], "output": []}
+        prompts = []
         for cg_str in f:
             cg_sample = CallGraphDataSample(raw_str=cg_str)
             if cg_sample.call_graph.valid:
@@ -62,13 +63,20 @@ def read_csv(filename, output_path, cg_stat_path: str):
                     # CG Layers
                     cg_layers = sample.convert_to_call_graph_layers(generation_type=task_type)
                     cg_layer_list = list(chain(*[cg_layer.to_layer_list() for cg_layer in cg_layers]))
-                    for idx, layer in enumerate(cg_layer_list):
+                    layer_prompt = ""
+                    for layer in cg_layer_list:
                         tag = "split" if layer.merged else "layer"
                         layer_inst_output = layer.to_prompt(generation_type=task_type, p90_stats=p90_stats.get(svc_id, (0, 0, 0)), rare_comm_events=rare_comm_events.get(svc_id, []))
+                        layer_prompt += layer_inst_output["instruction"] + f"<{tag}>\n" + layer_inst_output["output"] + f"</{tag}>\n"
+
                         instruction_output["instruction"].append(layer_inst_output["instruction"])
                         instruction_output["output"].append(f"<{tag}>\n" + layer_inst_output["output"] + f"</{tag}>\n")
+                    prompts.append(layer_prompt)
                 cg_buffer = []
         open(f"{output_path}/{filename.split('/')[-1]}.instruction", "wb").write(pickle.dumps(instruction_output))
+        with open(f"{output_path}/{filename.split('/')[-1]}.txt", "w") as f:
+            for prompt in prompts:
+                f.write(f"[GENERATE GRAPH]{prompt}")
         print(f"Write: {time.time() - start:.2f}")
 
 def main(dirname: str, output_path: str, cg_stat_path: str):
@@ -82,7 +90,7 @@ def main(dirname: str, output_path: str, cg_stat_path: str):
 
 
 if __name__ == "__main__":
-    dirname = "data/CallGraph"
-    output_path = "data/CallGraph/output"
-    cg_stat_path = "data/CallGraph/cg_stats/"
+    dirname = "data/CallGraph/training_data/deduplicated"
+    output_path = "data/CallGraph/training_data/text_representations"
+    cg_stat_path = "data/CallGraph/training_data/cg_stats/"
     main(dirname, output_path, cg_stat_path)

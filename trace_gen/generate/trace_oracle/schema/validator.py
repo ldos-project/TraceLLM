@@ -43,7 +43,6 @@ class GenOutputValidator:
             api_calls = []
             if "<edges>" in edges_str:
                 edges_str = edges_str.split("<edges>", 1)[-1]
-                # edges_str = edges_str.split(">", 1)[-1]
                 edges_str_split = edges_str.split("</edges>", 1)
                 edges_str = edges_str_split[0]
                 if len(edges_str) > 1:

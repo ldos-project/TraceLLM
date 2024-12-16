@@ -22,15 +22,18 @@ def read_csv(filename, output_path):
     infilling_stats = defaultdict(list)
 
     with open(filename, "r") as f:
+        num_lines = len(f.readlines())
+
+    with open(filename, "r") as f:
         print("Start file reading.")
         start = time.time()
         cnt = 0
-        for cg_str in f:
+        for line_idx, cg_str in enumerate(f):
             cg_sample = CallGraphDataSample(raw_str=cg_str)
             if cg_sample.call_graph.valid:
                 cg_buffer.append(cg_sample)
             cnt += 1
-            if cnt % 10000 == 0:
+            if cnt % 10000 == 0 or line_idx == num_lines - 1:
                 print(f"file reading progress: {cnt}, {time.time() - start:.2f}")
                 cg_samples = CallGraphDataSamples(cg_buffer)
                 for sample in cg_samples.samples:
@@ -92,6 +95,6 @@ def main(dirname: str, output_path: str):
         )
 
 if __name__ == "__main__":
-    dirname = "data/CallGraph/"
-    output_path = "data/CallGraph/cg_stats"
+    dirname = "data/CallGraph/training_data/deduplicated"
+    output_path = "data/CallGraph/training_data/cg_stats"
     main(dirname, output_path)

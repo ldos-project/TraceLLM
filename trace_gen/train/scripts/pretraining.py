@@ -72,11 +72,11 @@ def load_local_dataset(csv_files):
     return iter([item for sublist in item_list for item in sublist])
 
 def create_dataloaders(args):
-    dirname = "<REPLACE ME>"
+    dirname = "data/CallGraph/training_data/deduplicated"
 
-    train_data = load_dataset_from_csv_path(dirname + "/training_trace_text_representaion")
+    train_data = load_dataset_from_csv_path(dirname + "/text_representaions/training")
     train_data = train_data.shuffle(seed=args.seed)
-    valid_data = load_dataset_from_csv_path(dirname + "/validation_trace_text_representation")
+    valid_data = load_dataset_from_csv_path(dirname + "/text_representations/validation")
 
     config_model = accelerator.unwrap_model(model).config
 

@@ -40,7 +40,10 @@ class CallGraph(BaseModel):
         if self.service_id < 0:  # or self.service_id > MAX_SERVICE_ID:
             self.invalid_reason.append("invalid service id scope")
 
-        for edge in self.edges:
+        for edge_idx, edge in enumerate(self.edges):
+            if edge_idx == 0 and edge.rpc_id != "0":
+                self.invalid_reason += ["invalid root"]
+                break
             if edge.rpc_type in ["UNKNOWN", "UNAVAILABLE"] or edge.src_ms in ["UNKNOWN", "UNAVAILABLE"] or edge.dest_ms in ["UNKNOWN", "UNAVAILABLE"]:
                 self.invalid_reason += ["missing info"]
                 break

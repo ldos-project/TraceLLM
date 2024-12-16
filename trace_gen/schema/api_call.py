@@ -76,8 +76,6 @@ class APICall(BaseModel):
                 f"{APICallAttributes.DEST.value} is {self.dest_ms}",
                 f"{APICallAttributes.OFFSET.value} {str(self.timedelta)} milliseconds",
                 f"{APICallAttributes.FINISHED_AT.value} {str(self.timedelta + self.response_time)} milliseconds",
-                # f"{APICallAttributes.LATENCY_REQUIREMENT.value} {str(latency)} milliseconds",
-                # f"{APICallAttributes.RESPONSE_TIME.value} is {str(self.response_time)}",
             ]
         random.shuffle(edge_attributes)
         return ",".join(edge_attributes) 
@@ -90,9 +88,6 @@ class APICall(BaseModel):
                 f"{APICallAttributes.SRC.value} is {self.src_ms}",
                 f"{APICallAttributes.DEST.value} is {self.dest_ms}",
                 f"{APICallAttributes.OFFSET.value} {str(self.timedelta)} milliseconds",
-                # f"{APICallAttributes.FINISHED_AT.value} {str(self.timedelta + self.response_time)} milliseconds",
-                # f"{APICallAttributes.LATENCY_REQUIREMENT.value} {str(latency)} milliseconds",
-                # f"{APICallAttributes.RESPONSE_TIME.value} is {str(self.response_time)}",
             ]
         else:
             edge_attributes = [
@@ -100,9 +95,6 @@ class APICall(BaseModel):
                 f"{APICallAttributes.RPC_TYPE.value} is {self.rpc_type}",
                 f"{APICallAttributes.DEST.value} is {self.dest_ms}",
                 f"{APICallAttributes.OFFSET.value} {str(self.timedelta)} milliseconds",
-                # f"{APICallAttributes.FINISHED_AT.value} {str(self.timedelta + self.response_time)} milliseconds",
-                # f"{APICallAttributes.LATENCY_REQUIREMENT.value} {str(latency)} milliseconds",
-                # f"{APICallAttributes.RESPONSE_TIME.value} is {str(self.response_time)}",
             ]
         random.shuffle(edge_attributes)
         return ",".join(edge_attributes)
@@ -144,8 +136,6 @@ class APICall(BaseModel):
                 f"{APICallAttributes.DEST.value} is {self.dest_ms}",
                 f"{APICallAttributes.OFFSET.value} {str(self.timedelta)} milliseconds",
                 f"{APICallAttributes.FINISHED_AT.value} {str(self.timedelta + self.response_time)} milliseconds",
-                # f"{APICallAttributes.LATENCY_REQUIREMENT.value} {str(latency)} milliseconds",
-                # f"{APICallAttributes.RESPONSE_TIME.value} is {str(self.response_time)}",
             ]
         else:
             edge_attributes = [
@@ -154,8 +144,6 @@ class APICall(BaseModel):
                 f"{APICallAttributes.DEST.value} is {self.dest_ms}",
                 f"{APICallAttributes.OFFSET.value} {str(self.timedelta)} milliseconds",
                 f"{APICallAttributes.FINISHED_AT.value} {str(self.timedelta + self.response_time)} milliseconds",
-                # f"{APICallAttributes.LATENCY_REQUIREMENT.value} {str(latency)} milliseconds",
-                # f"{APICallAttributes.RESPONSE_TIME.value} is {str(self.response_time)}",
             ]
         random.shuffle(edge_attributes)
         return ",".join(edge_attributes)

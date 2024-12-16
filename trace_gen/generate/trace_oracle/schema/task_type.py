@@ -7,7 +7,6 @@ from pydantic import BaseModel
 
 
 class TraceGenTaskType(Enum):
-    context_gen = 0
     graph_gen = 1
     graph_gen_non_recursive = 2
     graph_gen_recursive = 3

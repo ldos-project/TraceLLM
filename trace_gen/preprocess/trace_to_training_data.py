@@ -5,7 +5,6 @@ from itertools import repeat
 from multiprocessing import Pool
 from typing import Dict, List
 
-import sys
 import pandas as pd
 
 from trace_gen.schema.api_call import APICall
@@ -56,14 +55,14 @@ def merge_trace_ids(df: pd.DataFrame, timestamp_by_traceid: Dict[str, int]):
     df = df.join(df_delta["delta"])
     df["sequence"] = (
         df["rpc_id"]
-        + "|ARRIVED_"
-        + df["delta"]
         + "|"
         + df["rpctype"]
         + "|"
         + df["um"]
         + "|"
         + df["dm"]
+        + "|ARRIVED_"
+        + df["delta"]
         + "|RT_"
         + df["rt"]
     )
@@ -79,7 +78,7 @@ def merge_trace_ids(df: pd.DataFrame, timestamp_by_traceid: Dict[str, int]):
     return df.loc[df["sequence"].notnull()]
 
 
-def read_csv(filename, svc_ids, base_date, date_format, output_path):
+def read_csv(filename, base_date, date_format, output_path):
     "converts a filename to a pandas dataframe"
     print(filename)
     df = pd.read_csv(filename, on_bad_lines="skip")
@@ -125,16 +124,12 @@ def main(dirname: str, output_path: str):
     base_date = datetime(year=2023, month=1, day=1)
     date_format = "%Hh%Mm%Ss%f"
 
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    svc_df = pd.read_csv(dir_path + "/top_service.csv")
-    svc_ids = svc_df["service"].to_list()
-
     # merge
     csv_files = sorted(glob.glob(f"{dirname}/*.csv"))
     with Pool(processes=10) as pool:  # or whatever your hardware can support
         pool.starmap(
             read_csv,
-            zip(csv_files, repeat(svc_ids), repeat(base_date), repeat(date_format), repeat(output_path)),
+            zip(csv_files, repeat(base_date), repeat(date_format), repeat(output_path)),
         )
 
 

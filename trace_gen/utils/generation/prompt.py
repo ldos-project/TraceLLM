@@ -1,5 +1,5 @@
 from typing import List
-from trace_gen.schema.api_call import APICall, APICallAttributes
+from trace_gen.schema.api_call import APICall
 from trace_gen.generate.trace_oracle.schema.task_type import TraceGenTaskType
 
 def system_prompt() -> str:
@@ -43,7 +43,7 @@ def start_communication_at_in_edge_desc(offset: int) -> str:
     return f"the first start_communication_at should be requirement's start_communication_at {offset}"
 
 # Subgraph generation description
-def num_generated_edges_desc(generated: int, total: int, edges: list[APICall]) -> str:
+def num_generated_edges_desc(generated: int, total: int, edges: List[APICall]) -> str:
     desc = f"num generated edges = the last edge id - the first edge id + 1 = {edges[-1].recent_rpc_id} - {edges[0].recent_rpc_id} + 1 = {generated}\n"
     desc += f"{generated} edges generated out of num_edges:{total}\n"
     desc += f"num_remaining_edges = num_edges:{total} - generated:{generated} = {total - generated}\n"

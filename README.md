@@ -1,10 +1,12 @@
-# Microservice Trace Generators with Large Language Models
+# Large Language Models as Realistic Microservice Trace Generators
 
 ## Dependencies
 We use python language where dependencies can be found in `trace_gen/requirements.txt`.
 Also, we install our codes as a python package we use `poetry`.
 Use the following commands:
 ```bash
+conda create -n tracellm python=3.8 -y
+conda activate tracellm
 pip install poetry
 # In the root directory
 poetry install
@@ -17,11 +19,11 @@ pip install -r requirements.txt
 We use `CallGraph` data in [Alibaba microservice v2022 traces](https://github.com/alibaba/clusterdata/tree/master/cluster-trace-microservices-v2022) as our training data.
 Fetch the first 20 files of `CallGraph` using the scripts in Alibaba's repo and preprocess the data using our scripts.
 
-
-To convert the separate API calls into call graphs, use the following command.
+To convert the separate API calls into call graphs and remove redundant call graphs, use the following command.
 Make sure to change file directories before you execute the command.
 ```bash
 > python trace_gen/preprocess/trace_to_training_data.py
+> python trace_gen/preprocess/remove_redundant_training_data.py
 ```
 
 To collect call graph stats required to generate instructions, run the following commands:
