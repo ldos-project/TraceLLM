@@ -58,3 +58,4 @@ Model training scripts can be found in `trace_gen/train`.
 ## Generation
 To get the accuracy report, follow the script in `trace_gen/generate/run_accuracy_eval.sh`.
 To run the script, prompt files and lora adapaters after training are required.
+We provide example lora adapters in the `checkpoints` directory.
