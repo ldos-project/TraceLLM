@@ -1,0 +1,2 @@
+### Question: start_communication_at:0/id:S_120044684/num_edges:18/latency:34/start_node:USER/start_edge_id:0/remaining_depth:5/num_current_edges:1/num_subgraphs:1
+### Question: start_communication_at:0/start_node:USER/num_current_edges:1/latency:15/start_edge_id:0/id:S_062583436/remaining_depth:5/num_edges:18/num_subgraphs:1

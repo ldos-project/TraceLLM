@@ -1,0 +1,66 @@
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_node:USER/num_current_edges:1/start_edge_id:0/num_edges:16/start_communication_at:0/latency:120/remaining_depth:4/num_subgraphs:1/id:S_117670859
+Conditions:
+Also, communication should finish before latency 120 milliseconds
+for all edges, communication start time <= communication finish time
+the first start_communication_at should be requirement's start_communication_at 0
+copy caller from requirement's start_node:USER
+In each edge, communication start time should NOT be greater than latency 120 milliseconds
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_edge_id:0/id:S_025464072/remaining_depth:4/num_current_edges:1/num_edges:16/latency:81/start_node:USER/start_communication_at:0
+Conditions:
+the first edge_id should be start_edge_id 0
+for all edges, communication start time <= communication finish time
+the first start_communication_at should be requirement's start_communication_at 0
+In each edge, communication start time should NOT be greater than latency 81 milliseconds
+generate 1 edges following num_current_edges
+copy caller from requirement's start_node:USER
+Also, communication should finish before latency 81 milliseconds
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+id:S_075752507/start_node:USER/remaining_depth:4/num_subgraphs:1/num_edges:16/start_communication_at:0/start_edge_id:0/num_current_edges:1
+Conditions:
+Build a call graph with high latency
+copy caller from requirement's start_node:USER
+generate 1 edges following num_current_edges
+the first start_communication_at should be requirement's start_communication_at 0
+for all edges, communication start time <= communication finish time
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+id:S_143411848/num_edges:16/start_node:USER/start_communication_at:0/num_subgraphs:1/start_edge_id:0/num_current_edges:1/remaining_depth:4
+Conditions:
+copy caller from requirement's start_node:USER
+the first edge_id should be start_edge_id 0
+the first start_communication_at should be requirement's start_communication_at 0
+for all edges, communication start time <= communication finish time
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+id:S_160775751/num_current_edges:1/start_communication_at:0/latency:59/start_node:USER/num_edges:16/remaining_depth:4/num_subgraphs:1/start_edge_id:0
+Conditions:
+Also, communication should finish before latency 59 milliseconds
+In each edge, communication start time should NOT be greater than latency 59 milliseconds
+copy caller from requirement's start_node:USER
+the first edge_id should be start_edge_id 0
+the first start_communication_at should be requirement's start_communication_at 0
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_edges:16/start_communication_at:0/remaining_depth:4/num_current_edges:1/start_edge_id:0/id:S_002419452/num_subgraphs:1/start_node:USER
+Conditions:
+for all edges, communication start time <= communication finish time
+the first start_communication_at should be requirement's start_communication_at 0
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_edge_id:0/remaining_depth:4/num_subgraphs:1/start_node:USER/id:S_117670859/num_current_edges:1/num_edges:16
+Conditions:
+for all edges, communication start time <= communication finish time
+copy caller from requirement's start_node:USER
+the first edge_id should be start_edge_id 0
+Build a call graph with latencies based on distributions

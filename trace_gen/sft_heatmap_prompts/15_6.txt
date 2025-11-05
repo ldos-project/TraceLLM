@@ -1,0 +1,18 @@
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+remaining_depth:5/id:S_048212960/start_node:USER/num_edges:15/start_communication_at:0/start_edge_id:0/num_current_edges:1
+Conditions:
+the first start_communication_at should be requirement's start_communication_at 0
+Generate subgraph instructions if necessary
+for all edges, communication start time <= communication finish time
+the first edge_id should be start_edge_id 0
+copy caller from requirement's start_node:USER
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+id:S_048212960/start_node:USER/num_edges:15/start_communication_at:0/start_edge_id:0/num_current_edges:1/remaining_depth:5
+Conditions:
+copy caller from requirement's start_node:USER
+Generate subgraph instructions if necessary
+the first start_communication_at should be requirement's start_communication_at 0
+the first edge_id should be start_edge_id 0
+for all edges, communication start time <= communication finish time

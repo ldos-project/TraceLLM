@@ -57,5 +57,11 @@ Model training scripts are in `trace_gen/train`.
 
 ## Generation
 To get the accuracy report, follow the script in `trace_gen/generate/run_accuracy_eval.sh`.
-To run the script, prompt files and LoRA adapters after training are required.
-We provide example LoRA adapters in the `checkpoints` directory.
+
+Before running the script, you'll need:
+1. Prompt files - These contain the input instructions for the model
+2. LoRA adapter checkpoints - These are model weights after training
+
+Example file locations:
+- LoRA adapters: Find them in the `checkpoints` directory
+- Example prompts: Located in various directories starting with `trace_gen/sft_heatmap_prompts`

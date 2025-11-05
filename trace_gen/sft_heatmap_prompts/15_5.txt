@@ -1,0 +1,67 @@
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_edges:15/id:S_123655229/start_communication_at:0/start_node:USER/start_edge_id:0/num_current_edges:1/num_subgraphs:1/remaining_depth:4
+Conditions:
+the first edge_id should be start_edge_id 0
+for all edges, communication start time <= communication finish time
+copy caller from requirement's start_node:USER
+generate 1 edges following num_current_edges
+the first start_communication_at should be requirement's start_communication_at 0
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_edges:15/num_current_edges:1/remaining_depth:4/start_communication_at:0/start_edge_id:0/id:S_117670859/start_node:USER/num_subgraphs:1
+Conditions:
+for all edges, communication start time <= communication finish time
+copy caller from requirement's start_node:USER
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_subgraphs:1/latency:133/num_edges:15/start_node:USER/start_edge_id:0/start_communication_at:0/num_current_edges:1/remaining_depth:4/id:S_117670859
+Conditions:
+the first edge_id should be start_edge_id 0
+Also, communication should finish before latency 133 milliseconds
+generate 1 edges following num_current_edges
+In each edge, communication start time should NOT be greater than latency 133 milliseconds
+copy caller from requirement's start_node:USER
+the first start_communication_at should be requirement's start_communication_at 0
+for all edges, communication start time <= communication finish time
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+latency:39/num_edges:15/start_communication_at:0/start_edge_id:0/start_node:USER/id:S_025464072/num_subgraphs:1/num_current_edges:1/remaining_depth:4
+Conditions:
+copy caller from requirement's start_node:USER
+the first start_communication_at should be requirement's start_communication_at 0
+Also, communication should finish before latency 39 milliseconds
+generate 1 edges following num_current_edges
+the first edge_id should be start_edge_id 0
+In each edge, communication start time should NOT be greater than latency 39 milliseconds
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_node:USER/num_edges:15/start_communication_at:0/start_edge_id:0/id:S_025464072/num_subgraphs:1/num_current_edges:1/remaining_depth:4
+Conditions:
+copy caller from requirement's start_node:USER
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+for all edges, communication start time <= communication finish time
+Build a call graph with latencies based on distributions
+the first start_communication_at should be requirement's start_communication_at 0
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_subgraphs:1/id:S_117670859/start_edge_id:0/start_communication_at:0/start_node:USER/num_current_edges:1/remaining_depth:4/num_edges:15
+Conditions:
+the first edge_id should be start_edge_id 0
+for all edges, communication start time <= communication finish time
+Build a call graph with latencies based on distributions
+the first start_communication_at should be requirement's start_communication_at 0
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_subgraphs:1/start_edge_id:0/id:S_014088638/start_communication_at:0/remaining_depth:4/num_current_edges:1/latency:91/num_edges:15/start_node:USER
+Conditions:
+Also, communication should finish before latency 91 milliseconds
+In each edge, communication start time should NOT be greater than latency 91 milliseconds
+copy caller from requirement's start_node:USER
+for all edges, communication start time <= communication finish time
+the first edge_id should be start_edge_id 0
+the first start_communication_at should be requirement's start_communication_at 0

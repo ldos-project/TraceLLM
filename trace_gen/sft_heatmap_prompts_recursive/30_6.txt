@@ -1,0 +1,4 @@
+### Question: remaining_depth:5/num_edges:30/latency:41/num_subgraphs:1/id:S_142212181/start_node:USER/start_communication_at:0/start_edge_id:0
+### Question: num_edges:30/start_communication_at:0/latency:37/remaining_depth:5/start_node:USER/start_edge_id:0/num_current_edges:1/id:S_020679056/num_subgraphs:1
+### Question: num_edges:30/start_edge_id:0/id:S_027259969/start_communication_at:0/latency:38/remaining_depth:5/num_current_edges:1/num_subgraphs:1
+### Question: num_subgraphs:1/num_current_edges:1/num_edges:30/id:S_027259969/start_edge_id:0/remaining_depth:5/start_node:USER/start_communication_at:0/latency:39

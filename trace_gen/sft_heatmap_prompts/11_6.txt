@@ -1,0 +1,86 @@
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_communication_at:0/remaining_depth:5/start_edge_id:0/id:S_123655229/num_edges:11/start_node:USER/num_current_edges:1
+Conditions:
+generate 1 edges following num_current_edges
+for all edges, communication start time <= communication finish time
+the first start_communication_at should be requirement's start_communication_at 0
+the first edge_id should be start_edge_id 0
+copy caller from requirement's start_node:USER
+Build a call graph with latencies based on distributions
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_current_edges:1/remaining_depth:5/start_communication_at:0/start_edge_id:0/latency:9836/start_node:USER/id:S_001823657/num_subgraphs:1/num_edges:11
+Conditions:
+the first edge_id should be start_edge_id 0
+Also, communication should finish before latency 9836 milliseconds
+In each edge, communication start time should NOT be greater than latency 9836 milliseconds
+copy caller from requirement's start_node:USER
+for all edges, communication start time <= communication finish time
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_current_edges:1/latency:10/id:S_087126995/start_edge_id:0/start_communication_at:0/num_edges:11/num_subgraphs:1/remaining_depth:5/start_node:USER
+Conditions:
+generate 1 edges following num_current_edges
+copy caller from requirement's start_node:USER
+the first start_communication_at should be requirement's start_communication_at 0
+In each edge, communication start time should NOT be greater than latency 10 milliseconds
+for all edges, communication start time <= communication finish time
+Also, communication should finish before latency 10 milliseconds
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_communication_at:0/num_edges:11/id:S_106290614/start_node:USER/remaining_depth:5/start_edge_id:0/latency:15
+Conditions:
+for all edges, communication start time <= communication finish time
+the first edge_id should be start_edge_id 0
+Also, communication should finish before latency 15 milliseconds
+the first start_communication_at should be requirement's start_communication_at 0
+copy caller from requirement's start_node:USER
+In each edge, communication start time should NOT be greater than latency 15 milliseconds
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_edges:11/start_node:USER/start_edge_id:0/num_subgraphs:1/remaining_depth:5/num_current_edges:1/id:S_001823657
+Conditions:
+for all edges, communication start time <= communication finish time
+the first edge_id should be start_edge_id 0
+copy caller from requirement's start_node:USER
+generate 1 edges following num_current_edges
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_communication_at:0/num_edges:11/start_edge_id:0/start_node:USER/id:S_001823657/num_current_edges:1/remaining_depth:5
+Conditions:
+copy caller from requirement's start_node:USER
+Build a call graph with high latency
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+for all edges, communication start time <= communication finish time
+Generate subgraph instructions if necessary
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_edge_id:0/id:S_001823657/latency:7101/num_subgraphs:1/start_communication_at:0/num_edges:11/start_node:USER/remaining_depth:5
+Conditions:
+for all edges, communication start time <= communication finish time
+the first start_communication_at should be requirement's start_communication_at 0
+In each edge, communication start time should NOT be greater than latency 7101 milliseconds
+copy caller from requirement's start_node:USER
+Also, communication should finish before latency 7101 milliseconds
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+remaining_depth:5/num_edges:11/num_current_edges:1/start_node:USER/id:S_001823657/start_edge_id:0/num_subgraphs:1
+Conditions:
+copy caller from requirement's start_node:USER
+Build a call graph with latencies based on distributions
+generate 1 edges following num_current_edges
+the first edge_id should be start_edge_id 0
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_edges:11/start_node:USER/num_current_edges:1/id:S_001823657/start_edge_id:0/num_subgraphs:1/latency:3136/remaining_depth:5/start_communication_at:0
+Conditions:
+the first start_communication_at should be requirement's start_communication_at 0
+copy caller from requirement's start_node:USER
+the first edge_id should be start_edge_id 0
+for all edges, communication start time <= communication finish time
+In each edge, communication start time should NOT be greater than latency 3136 milliseconds
+generate 1 edges following num_current_edges
+Also, communication should finish before latency 3136 milliseconds

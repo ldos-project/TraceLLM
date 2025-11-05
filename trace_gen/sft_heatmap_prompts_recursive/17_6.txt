@@ -1,0 +1,14 @@
+### Question: num_edges:17/start_edge_id:0/num_current_edges:1/id:S_120044684/remaining_depth:5/start_node:USER/latency:15/start_communication_at:0/num_subgraphs:1
+### Question: latency:14/num_edges:17/num_subgraphs:1/id:S_120044684/start_communication_at:0/remaining_depth:5/start_node:USER/start_edge_id:0/num_current_edges:1
+### Question: start_communication_at:0/id:S_120044684/num_subgraphs:1/num_edges:17/latency:14/remaining_depth:5/start_edge_id:0/start_node:USER/num_current_edges:1
+### Question: num_current_edges:1/num_subgraphs:1/latency:13/start_communication_at:0/start_edge_id:0/remaining_depth:5/num_edges:17/id:S_120044684/start_node:USER
+### Question: id:S_120044684/start_node:USER/num_current_edges:1/remaining_depth:5/start_communication_at:0/latency:12/num_subgraphs:1/num_edges:17
+### Question: latency:12/num_subgraphs:1/start_edge_id:0/num_current_edges:1/remaining_depth:5/start_node:USER/start_communication_at:0/id:S_120044684/num_edges:17
+### Question: num_edges:17/num_subgraphs:1/start_edge_id:0/num_current_edges:1/remaining_depth:5/start_node:USER/id:S_120044684/latency:12
+### Question: remaining_depth:5/start_communication_at:0/start_edge_id:0/latency:14/num_subgraphs:1/num_current_edges:1/num_edges:17/id:S_120044684
+### Question: num_current_edges:1/remaining_depth:5/start_node:USER/num_edges:17/latency:14/id:S_120044684/num_subgraphs:1/start_communication_at:0
+### Question: num_edges:17/start_edge_id:0/remaining_depth:5/num_subgraphs:1/start_communication_at:0/latency:14/id:S_120044684
+### Question: num_edges:17/num_subgraphs:1/start_edge_id:0/start_communication_at:0/start_node:USER/remaining_depth:5/latency:14/id:S_120044684
+### Question: start_node:USER/id:S_120044684/start_communication_at:0/latency:13/remaining_depth:5/num_subgraphs:1/num_edges:17/start_edge_id:0
+### Question: start_communication_at:0/start_node:USER/start_edge_id:0/latency:12/num_subgraphs:1/id:S_120044684/remaining_depth:5/num_edges:17/num_current_edges:1
+### Question: start_edge_id:0/id:S_120044684/remaining_depth:5/num_edges:17/start_node:USER/num_current_edges:1

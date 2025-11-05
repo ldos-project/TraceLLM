@@ -1,0 +1,15 @@
+### Question: latency:3905/remaining_depth:2/num_current_edges:1/start_node:USER/start_communication_at:0/start_edge_id:0/num_subgraphs:1/num_edges:28/id:S_036816397
+### Question: start_communication_at:0/start_node:USER/latency:2188/id:S_036816397/num_edges:28/start_edge_id:0/num_subgraphs:1/remaining_depth:2
+### Question: start_communication_at:0/latency:11429/num_edges:28/num_current_edges:1/remaining_depth:2/id:S_036816397/start_edge_id:0/start_node:USER/num_subgraphs:1
+### Question: start_communication_at:0/num_edges:28/id:S_136225813/latency:132/num_current_edges:1/start_edge_id:0/remaining_depth:2/num_subgraphs:1/start_node:USER
+### Question: remaining_depth:2/num_current_edges:1/num_edges:28/num_subgraphs:1/start_communication_at:0/start_node:USER/latency:541/id:S_121263079/start_edge_id:0
+### Question: num_current_edges:1/remaining_depth:2/id:S_070965305/num_edges:28/num_subgraphs:1/start_communication_at:0/start_node:USER/latency:43/start_edge_id:0
+### Question: num_edges:28/latency:28/num_current_edges:1/start_communication_at:0/start_edge_id:0/start_node:USER/id:S_070965305/num_subgraphs:1/remaining_depth:2
+### Question: start_communication_at:0/num_current_edges:1/id:S_100293104/start_edge_id:0/start_node:USER/num_subgraphs:1/num_edges:28/latency:148/remaining_depth:2
+### Question: latency:160/start_edge_id:0/remaining_depth:2/id:S_123633214/start_node:USER/num_edges:28/num_current_edges:1
+### Question: num_subgraphs:1/num_edges:28/start_edge_id:0/remaining_depth:2/num_current_edges:1/latency:28/id:S_032647104/start_communication_at:0/start_node:USER
+### Question: latency:59/num_subgraphs:1/id:S_070965305/start_communication_at:0/remaining_depth:2/num_current_edges:1/start_edge_id:0/num_edges:28
+### Question: num_subgraphs:1/num_current_edges:1/start_communication_at:0/start_node:USER/start_edge_id:0/remaining_depth:2/id:S_070965305/num_edges:28
+### Question: num_current_edges:1/start_node:USER/latency:51/remaining_depth:2/id:S_070965305/num_edges:28/num_subgraphs:1/start_communication_at:0
+### Question: latency:24/start_node:USER/remaining_depth:2/num_subgraphs:1/start_edge_id:0/start_communication_at:0/id:S_007186129/num_edges:28
+### Question: num_edges:28/id:S_070965305/start_communication_at:0/remaining_depth:2/start_node:USER/latency:95/num_current_edges:1/start_edge_id:0/num_subgraphs:1

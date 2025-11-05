@@ -1,0 +1,20 @@
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_edge_id:0/id:S_163769826/num_edges:14/remaining_depth:5/num_current_edges:1/start_communication_at:0/start_node:USER/num_subgraphs:1
+Conditions:
+generate 1 edges following num_current_edges
+Build a call graph with latencies based on distributions
+copy caller from requirement's start_node:USER
+the first start_communication_at should be requirement's start_communication_at 0
+for all edges, communication start time <= communication finish time
+the first edge_id should be start_edge_id 0
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_edge_id:0/num_subgraphs:1/remaining_depth:5/id:S_021874676/start_communication_at:0/num_current_edges:1/start_node:USER/latency:220/num_edges:14
+Conditions:
+for all edges, communication start time <= communication finish time
+Also, communication should finish before latency 220 milliseconds
+the first edge_id should be start_edge_id 0
+In each edge, communication start time should NOT be greater than latency 220 milliseconds
+generate 1 edges following num_current_edges
+the first start_communication_at should be requirement's start_communication_at 0

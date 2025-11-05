@@ -1,0 +1,16 @@
+### Question: remaining_depth:4/num_edges:16/latency:104/num_subgraphs:1/id:S_079344756/start_node:USER/start_communication_at:0/start_edge_id:0/num_current_edges:1
+### Question: num_edges:16/remaining_depth:4/num_current_edges:1/start_edge_id:0/start_communication_at:0/latency:26/num_subgraphs:1/id:S_079344732
+### Question: num_current_edges:1/start_node:USER/start_edge_id:0/id:S_117670859/num_subgraphs:1/num_edges:16/latency:127/start_communication_at:0/remaining_depth:4
+### Question: start_edge_id:0/start_communication_at:0/remaining_depth:4/id:S_117670859/num_edges:16/start_node:USER/num_subgraphs:1/num_current_edges:1/latency:125
+### Question: start_node:USER/start_communication_at:0/remaining_depth:4/id:S_022449731/start_edge_id:0/num_subgraphs:1/latency:8276/num_edges:16/num_current_edges:1
+### Question: remaining_depth:4/num_current_edges:1/num_subgraphs:1/start_communication_at:0/num_edges:16/id:S_117670859/start_edge_id:0
+### Question: remaining_depth:4/start_communication_at:0/start_edge_id:0/latency:25/num_edges:16/num_subgraphs:1/id:S_155982224/start_node:USER/num_current_edges:1
+### Question: num_subgraphs:1/num_current_edges:1/start_node:USER/num_edges:16/start_edge_id:0/latency:12/id:S_092514356/start_communication_at:0/remaining_depth:4
+### Question: start_node:USER/latency:125/remaining_depth:4/start_communication_at:0/num_edges:16/start_edge_id:0/id:S_117670859/num_subgraphs:1
+### Question: id:S_149400285/latency:7502/num_current_edges:1/num_edges:16/num_subgraphs:1/start_edge_id:0/start_communication_at:0/remaining_depth:4
+### Question: num_edges:16/start_node:USER/remaining_depth:4/num_current_edges:1/id:S_117670859/start_edge_id:0/start_communication_at:0/latency:123
+### Question: remaining_depth:4/start_edge_id:0/num_subgraphs:1/latency:3122/id:S_149400285/start_communication_at:0/num_current_edges:1/num_edges:16
+### Question: start_communication_at:0/num_subgraphs:1/start_edge_id:0/latency:126/id:S_117670859/remaining_depth:4/num_current_edges:1/num_edges:16
+### Question: remaining_depth:4/id:S_117670859/start_node:USER/num_edges:16/num_current_edges:1/num_subgraphs:1/start_edge_id:0/start_communication_at:0/latency:120
+### Question: start_communication_at:0/start_edge_id:0/remaining_depth:4/start_node:USER/num_current_edges:1/num_edges:16/id:S_149400285/latency:5719/num_subgraphs:1
+### Question: start_node:USER/remaining_depth:4/num_edges:16/num_subgraphs:1/num_current_edges:1/id:S_117670859/start_edge_id:0/latency:133/start_communication_at:0

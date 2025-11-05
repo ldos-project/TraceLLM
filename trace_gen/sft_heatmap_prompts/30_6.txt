@@ -1,0 +1,39 @@
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_node:USER/start_edge_id:0/num_subgraphs:1/start_communication_at:0/latency:54/num_edges:30/remaining_depth:5/num_current_edges:1/id:S_163769826
+Conditions:
+In each edge, communication start time should NOT be greater than latency 54 milliseconds
+the first edge_id should be start_edge_id 0
+the first start_communication_at should be requirement's start_communication_at 0
+generate 1 edges following num_current_edges
+Also, communication should finish before latency 54 milliseconds
+for all edges, communication start time <= communication finish time
+copy caller from requirement's start_node:USER
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_edge_id:0/id:S_027259969/num_edges:30/num_current_edges:1/remaining_depth:5/start_node:USER/latency:42/num_subgraphs:1
+Conditions:
+copy caller from requirement's start_node:USER
+Also, communication should finish before latency 42 milliseconds
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+for all edges, communication start time <= communication finish time
+In each edge, communication start time should NOT be greater than latency 42 milliseconds
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+start_communication_at:0/num_subgraphs:1/id:S_161373726/num_current_edges:1/remaining_depth:5/num_edges:30/start_edge_id:0/start_node:USER
+Conditions:
+the first start_communication_at should be requirement's start_communication_at 0
+Build a call graph with latencies based on distributions
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+for all edges, communication start time <= communication finish time
+### Question: You are a trace generator that creates traces based on given requirements.
+Requirements:
+num_edges:30/latency:40/num_current_edges:1/start_edge_id:0/id:S_027259969/start_node:USER/start_communication_at:0/num_subgraphs:1/remaining_depth:5
+Conditions:
+the first edge_id should be start_edge_id 0
+generate 1 edges following num_current_edges
+the first start_communication_at should be requirement's start_communication_at 0
+for all edges, communication start time <= communication finish time
+copy caller from requirement's start_node:USER

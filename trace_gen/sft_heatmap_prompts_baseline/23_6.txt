@@ -1,0 +1,13 @@
+### Question: depth:6/id:S_163769826/num_edges:23/latency:30
+### Question: latency:102/id:S_041625275/num_edges:23/depth:6
+### Question: depth:6/id:S_041625275/num_edges:23/latency:91
+### Question: latency:128/id:S_041625275/depth:6/num_edges:23
+### Question: latency:28/id:S_104495288/num_edges:23/depth:6
+### Question: latency:29/id:S_104495288/num_edges:23/depth:6
+### Question: depth:6/latency:39/id:S_153584695/num_edges:23
+### Question: latency:49/num_edges:23/id:S_163769826/depth:6
+### Question: id:S_153584695/depth:6/num_edges:23/latency:40
+### Question: id:S_163769826/num_edges:23/latency:31/depth:6
+### Question: num_edges:23/depth:6/id:S_104495288/latency:33
+### Question: num_edges:23/id:S_161373726/depth:6/latency:35
+### Question: num_edges:23/latency:32/id:S_161373726/depth:6

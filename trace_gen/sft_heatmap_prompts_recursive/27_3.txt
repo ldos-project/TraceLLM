@@ -1,0 +1,12 @@
+### Question: start_edge_id:0/num_subgraphs:1/start_communication_at:0/latency:7422/remaining_depth:2/id:S_036816397/start_node:USER/num_edges:27/num_current_edges:1
+### Question: start_edge_id:0/id:S_036816397/num_subgraphs:1/remaining_depth:2/num_current_edges:1/start_communication_at:0/latency:5288/start_node:USER/num_edges:27
+### Question: remaining_depth:2/id:S_036816397/start_communication_at:0/num_subgraphs:1/start_node:USER/start_edge_id:0/num_current_edges:1/num_edges:27/latency:1705
+### Question: start_edge_id:0/num_edges:27/num_current_edges:1/start_communication_at:0/num_subgraphs:1/id:S_123633214/latency:162/remaining_depth:2
+### Question: start_node:USER/latency:29/num_edges:27/remaining_depth:2/start_edge_id:0/num_subgraphs:1/num_current_edges:1/start_communication_at:0/id:S_108661792
+### Question: num_edges:27/start_communication_at:0/id:S_036816397/start_node:USER/num_subgraphs:1/num_current_edges:1/latency:5280/remaining_depth:2
+### Question: num_edges:27/start_communication_at:0/num_current_edges:1/start_node:USER/remaining_depth:2/latency:5434/start_edge_id:0/id:S_036816397
+### Question: num_current_edges:1/latency:7096/start_node:USER/start_edge_id:0/id:S_036816397/remaining_depth:2/num_subgraphs:1/start_communication_at:0/num_edges:27
+### Question: num_current_edges:1/start_node:USER/remaining_depth:2/id:S_158956206/start_communication_at:0/num_subgraphs:1/num_edges:27/start_edge_id:0
+### Question: start_edge_id:0/remaining_depth:2/num_subgraphs:1/latency:113/num_current_edges:1/num_edges:27/start_node:USER/id:S_070965305/start_communication_at:0
+### Question: start_communication_at:0/num_edges:27/start_node:USER/latency:24/remaining_depth:2/id:S_144011455/num_subgraphs:1/num_current_edges:1
+### Question: start_node:USER/num_subgraphs:1/start_edge_id:0/remaining_depth:2/latency:33/num_current_edges:1/num_edges:27/start_communication_at:0/id:S_025464072
