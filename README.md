@@ -1,8 +1,8 @@
 # Large Language Models as Realistic Microservice Trace Generators
 
 ## Dependencies
-We use python language where dependencies can be found in `trace_gen/requirements.txt`.
-Also, we install our codes as a python package we use `poetry`.
+We use the Python language, where dependencies can be found in `trace_gen/requirements.txt`.
+Also, we install our code as a Python package, and we use `poetry`.
 Use the following commands:
 ```bash
 conda create -n tracellm python=3.8 -y
@@ -45,17 +45,17 @@ Also, make sure to set the `task_type` correctly depending on your use cases:
 ```
 
 ## Data Examples
-We include part of training datasets in the `dataset_examples` folder:
+We include part of the training datasets in the `dataset_examples` folder:
 * `tabular_dataset.txt`: dataset in tabular format
 * `recursive_dataset.txt`: dataset in recursive format
 * `recursive_instruction_dataset.txt`: dataset in recursive format with instructions
 
 ## Training
-Model training scripts can be found in `trace_gen/train`.
-* `pretraining.py`: For pretraining LLaMA-7B with trace data.
+Model training scripts are in `trace_gen/train`.
+* `pretraining.py`: For pretraining LLaMA-2-7B with trace data.
 * `sft.py`: For supervised-fine-tuning the model with instruction datasets.
 
 ## Generation
 To get the accuracy report, follow the script in `trace_gen/generate/run_accuracy_eval.sh`.
-To run the script, prompt files and lora adapaters after training are required.
-We provide example lora adapters in the `checkpoints` directory.
+To run the script, prompt files and LoRA adapters after training are required.
+We provide example LoRA adapters in the `checkpoints` directory.
